@@ -43,6 +43,30 @@ ssh-keygen -t rsa -C "xkouliu@qq.com"
 
 - 创建新文件夹，打开，然后执行 `git init` 以创建新的 git 仓库。
 
+
+> [!NOTE] git remote add [shortname] [url]   
+> 这个添加新的远程仓库是指本地，推送上Git/Gitee的前提是上面已经存在这个仓库
+
+> [!NOTE] 添加新的远程仓库方法
+> 方法 1: 在GitHub上手动创建仓库
+> 
+方法 2: 使用GitHub CLI (gh)
+GitHub提供了命令行工具gh，可以让你直接从终端创建新的GitHub仓库：
+1.安装GitHub CLI：
+2.登录GitHub CLI
+`gh auth login`
+3.创建新仓库
+`gh repo create  <> --source=. --remote=origin`
+这条命令会在当前目录下创建一个新的GitHub仓库，并将其设置为本地仓库的远程仓库。
+> 
+方法 3: 使用 hub 工具
+hub 是一个Git的命令行扩展，它简化了与GitHub交互的过程。你可以使用hub来创建新仓库：
+安装hub：根据官方文档中的说明安装hub。
+创建新仓库：
+`hub create <>`
+这会创建一个新的GitHub仓库，并自动配置远程仓库URL。
+
+
 ###### 检出仓库
 - 执行如下命令以创建一个本地仓库的克隆版本：
 	`git clone /path/to/repository` 
@@ -215,3 +239,7 @@ git checkout <commit-hash> -- <file-path>
 # 然后使用 git restore 将更改应用到当前分支
 git restore --source=<commit-hash> <file-path>
 ```
+
+
+
+   
