@@ -242,4 +242,28 @@ git restore --source=<commit-hash> <file-path>
 
 
 
+   ##### 常用命令
+######  `git init  #初始化`
+######  `git remote add [shortname] [url]  #添加仓库`
+######  `git clone   #克隆`
+######  `git status  #状态`
+######  `git add .  #增加暂存区`
+######  `git commit -m ''  #提交暂存区`
+######  `git push origin master  #提交分支`
+######  `git pull origin master  #拉取分支`
+
    
+##### 常见报错
+###### 端口被屏蔽：ssh: connect to host github.com port 22: Connection timed out
+1. 终端输入ssh -T -p 443 git@ssh.github.com
+`#返回结果：Hi xxx! You've successfully authenticated,but Github ode not provide shell access.`
+2. C盘->用户->用户名文件夹->.ssh下，创建或编辑conifg文件，内容为：
+```
+Host github.com
+    Hostname ssh.github.com
+    Port 443
+```
+###### 换行符转换：LF will be replaced by CRLF the next time Git touches it
+```
+git config --global core.autocrlf input
+```
