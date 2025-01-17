@@ -185,7 +185,7 @@ fn get_element(index: usize, vec: &Vec<i32>) -> Option<i32> {
 	`语法声明：
 	let closure_name = |参数列表| 表达式或语句块;`
 	
-kj
+
 
 
 
