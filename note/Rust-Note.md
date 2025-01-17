@@ -124,18 +124,68 @@ Cargo 除了创建工程以外还具备构建（build）工程、运行（run）
 
 ## 代码相关
 
+##### `let s1 = String::from("hello")`
+这里 “ String::from ” 是指String类库的from方法
 
 
+ ##### Rust 有两种主要的错误处理方式：Result<T, E> 和 Option<T>
+
+###### Result
+```
+enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+
+fn divide(a: i32, b: i32) -> Result<i32, String> {
+    if b == 0 {
+        Err(String::from("Division by zero"))
+    } else {
+        Ok(a / b)
+    }
+}
+
+if let Ok(result) = divide(88, 0) {
+	println!("Result: {}", result);
+} else {
+	println!("An error occurred");
+}
+```
+
+###### Option
+```
+fn get_element(index: usize, vec: &Vec<i32>) -> Option<i32> {
+    if index < vec.len() {
+        Some(vec[index])
+    } else {
+        None
+    }
+}
+```
+
+##### 循环
+######  while循环
+	while (   ) {
+						
+	}
+######  for循环
+	for i in a.iter() {  
+	        println!("值为 : {}", i);  
+	}
+######  loop 循环
+	loop{
+	
+		break;
+	}			
+	使用break中断循环和返回值 break i;
 
 
-
-
-
-
-
-
-
-
+						
+##### 闭包
+	`语法声明：
+	let closure_name = |参数列表| 表达式或语句块;`
+	
+kj
 
 
 
