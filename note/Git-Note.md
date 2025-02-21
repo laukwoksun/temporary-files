@@ -251,7 +251,7 @@ git restore --source=<commit-hash> <file-path>
 ######  `git commit -m ''  #提交暂存区`
 ######  `git push origin master  #提交分支`
 ######  `git pull origin master  #拉取分支`
-
+#####   `type nul > .gitignore #本地新建一个.ignore文件(windows)`
    
 ##### 常见报错
 ###### 端口被屏蔽：ssh: connect to host github.com port 22: Connection timed out
